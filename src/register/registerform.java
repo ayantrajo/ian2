@@ -70,22 +70,24 @@ public class registerform extends javax.swing.JFrame {
         jSpinner1 = new javax.swing.JSpinner();
         scrollPane1 = new java.awt.ScrollPane();
         list1 = new java.awt.List();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        lname = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
-        username = new javax.swing.JTextField();
-        fname = new javax.swing.JTextField();
-        type = new javax.swing.JComboBox<>();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        type = new javax.swing.JComboBox<>();
         password = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
+        username = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        email = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        lname = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        fname = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
 
         jLabel6.setText("jLabel1");
 
@@ -99,41 +101,13 @@ public class registerform extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(614, 467));
         getContentPane().setLayout(null);
 
-        jLabel1.setText("First Name: ");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(130, 90, 70, 20);
+        jPanel2.setLayout(null);
 
-        jLabel2.setText("Last Name: ");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(130, 120, 70, 20);
-
-        jLabel3.setText("Email: ");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(130, 160, 60, 20);
-
-        jLabel4.setText("Username: ");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(130, 200, 60, 20);
-
-        jLabel5.setText("Password: ");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(130, 240, 60, 20);
-
-        jLabel7.setText("Type: ");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(130, 280, 60, 20);
-        getContentPane().add(lname);
-        lname.setBounds(200, 120, 140, 30);
-        getContentPane().add(email);
-        email.setBounds(200, 160, 140, 30);
-        getContentPane().add(username);
-        username.setBounds(200, 200, 140, 30);
-        getContentPane().add(fname);
-        fname.setBounds(200, 80, 140, 30);
-
-        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
-        getContentPane().add(type);
-        type.setBounds(200, 280, 140, 20);
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("REGISTER FORM");
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(0, 0, 610, 60);
 
         jButton1.setText("Register");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -146,8 +120,8 @@ public class registerform extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(340, 320, 110, 30);
+        jPanel2.add(jButton1);
+        jButton1.setBounds(390, 370, 130, 30);
 
         jButton2.setText("Cancel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -155,22 +129,83 @@ public class registerform extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(110, 320, 90, 30);
+        jPanel2.add(jButton2);
+        jButton2.setBounds(160, 370, 120, 30);
 
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Click here! Login Form.");
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
+        jLabel7.setText("Type: ");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(160, 320, 40, 30);
+
+        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
+        type.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeActionPerformed(evt);
             }
         });
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(0, 360, 530, 20);
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(110, -20, 10, 10);
-        getContentPane().add(password);
-        password.setBounds(200, 240, 140, 30);
+        jPanel2.add(type);
+        type.setBounds(190, 320, 120, 30);
+
+        password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordActionPerformed(evt);
+            }
+        });
+        jPanel2.add(password);
+        password.setBounds(160, 280, 350, 30);
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
+        jLabel5.setText("Password: ");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(160, 260, 60, 20);
+        jPanel2.add(username);
+        username.setBounds(160, 220, 350, 30);
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
+        jLabel4.setText("Username: ");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(160, 200, 60, 20);
+        jPanel2.add(email);
+        email.setBounds(160, 160, 350, 30);
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
+        jLabel3.setText("Email: ");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(160, 140, 60, 20);
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
+        jLabel2.setText("Last Name: ");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(340, 80, 90, 20);
+
+        lname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lnameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(lname);
+        lname.setBounds(340, 100, 170, 30);
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
+        jLabel1.setText("First Name: ");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(160, 80, 90, 20);
+        jPanel2.add(fname);
+        fname.setBounds(160, 100, 170, 30);
+
+        jPanel3.setLayout(null);
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/register/17-Ways-To-Find-Good-Books-To-Read.jpg"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        jPanel3.add(jLabel8);
+        jLabel8.setBounds(-150, 0, 790, 470);
+
+        jPanel2.add(jPanel3);
+        jPanel3.setBounds(0, 0, 610, 470);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 610, 470);
 
         pack();
         setLocationRelativeTo(null);
@@ -218,11 +253,17 @@ public class registerform extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-       loginForm lfr = new loginForm();
-        lfr.setVisible(true);
-        this.dispose(); 
-    }//GEN-LAST:event_jLabel8MouseClicked
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordActionPerformed
+
+    private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lnameActionPerformed
+
+    private void typeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_typeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,7 +313,9 @@ public class registerform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextArea jTextArea1;

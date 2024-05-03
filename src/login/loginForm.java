@@ -81,6 +81,7 @@ public static boolean loginAcc(String username, String password, boolean showpas
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        check = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         user = new javax.swing.JTextField();
@@ -94,12 +95,21 @@ public static boolean loginAcc(String username, String password, boolean showpas
 
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        check.setText("Show Password");
+        check.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkActionPerformed(evt);
+            }
+        });
+        jPanel1.add(check);
+        check.setBounds(381, 300, 120, 23);
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Username: ");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(220, 220, 110, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Password: ");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(220, 260, 110, 30);
@@ -119,9 +129,10 @@ public static boolean loginAcc(String username, String password, boolean showpas
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(230, 300, 270, 23);
+        jButton1.setBounds(220, 330, 280, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Click Here! Registration Form.");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -129,7 +140,7 @@ public static boolean loginAcc(String username, String password, boolean showpas
             }
         });
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(260, 340, 230, 20);
+        jLabel4.setBounds(220, 360, 280, 20);
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,6 +214,14 @@ public static boolean loginAcc(String username, String password, boolean showpas
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
 
+    private void checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActionPerformed
+        if(check.isSelected()){
+            password.setEchoChar((char)0);
+        }else{
+            password.setEchoChar('*');
+        }
+    }//GEN-LAST:event_checkActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -239,6 +258,7 @@ public static boolean loginAcc(String username, String password, boolean showpas
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox check;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

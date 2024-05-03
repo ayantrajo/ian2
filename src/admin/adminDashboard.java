@@ -30,8 +30,8 @@ public class adminDashboard extends javax.swing.JFrame {
     public adminDashboard() {
         initComponents();
     }   
-    Color hovercolor = new Color (255,204,204);
-     Color navcolor = new Color(204,204,255);  
+    Color hovercolor = new Color (000,000,000);
+     Color navcolor = new Color(255,255,255);  
       
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,8 +44,9 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -53,16 +54,16 @@ public class adminDashboard extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         acc_name = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         p_user = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -70,9 +71,9 @@ public class adminDashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 204));
-        setMaximumSize(new java.awt.Dimension(618, 488));
-        setMinimumSize(new java.awt.Dimension(618, 488));
-        setPreferredSize(new java.awt.Dimension(618, 488));
+        setMaximumSize(new java.awt.Dimension(639, 485));
+        setMinimumSize(new java.awt.Dimension(639, 485));
+        setPreferredSize(new java.awt.Dimension(639, 485));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -80,20 +81,25 @@ public class adminDashboard extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
+        jPanel5.setLayout(null);
+
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("LIBRARY MANAGEMENT SYSTEM");
+        jPanel5.add(jLabel14);
+        jLabel14.setBounds(-4, 0, 320, 30);
+
+        getContentPane().add(jPanel5);
+        jPanel5.setBounds(10, 10, 310, 30);
+
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("LIBRARY MANAGEMENT SYSTEM ");
-        jPanel4.add(jLabel2);
-        jLabel2.setBounds(10, 10, 310, 30);
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("REPORTS");
         jPanel4.add(jLabel7);
-        jLabel7.setBounds(510, 50, 70, 14);
+        jLabel7.setBounds(550, 50, 80, 14);
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -104,7 +110,7 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(40, 50, 70, 14);
+        jLabel8.setBounds(40, 50, 90, 14);
 
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -115,7 +121,7 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jLabel9);
-        jLabel9.setBounds(120, 50, 70, 14);
+        jLabel9.setBounds(130, 50, 90, 14);
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -126,7 +132,7 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jLabel10);
-        jLabel10.setBounds(200, 50, 70, 14);
+        jLabel10.setBounds(220, 50, 100, 14);
 
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -137,7 +143,7 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jLabel11);
-        jLabel11.setBounds(350, 50, 70, 14);
+        jLabel11.setBounds(390, 50, 70, 14);
 
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -148,7 +154,7 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jLabel12);
-        jLabel12.setBounds(280, 50, 70, 14);
+        jLabel12.setBounds(320, 50, 70, 14);
 
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -159,10 +165,22 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jLabel13);
-        jLabel13.setBounds(430, 50, 70, 14);
+        jLabel13.setBounds(460, 50, 90, 14);
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("BACK");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel4.add(jLabel3);
+        jLabel3.setBounds(530, 10, 110, 35);
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(0, 0, 620, 90);
+        jPanel4.setBounds(0, 0, 640, 90);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -175,15 +193,6 @@ public class adminDashboard extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/admin/images.png"))); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("BACK");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("DASHBOARD");
@@ -192,7 +201,6 @@ public class adminDashboard extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(acc_name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -206,9 +214,7 @@ public class adminDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(acc_name, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addContainerGap(264, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel3);
@@ -223,11 +229,6 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.setLayout(null);
-
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/admin/images.png"))); // NOI18N
-        jPanel2.add(jLabel6);
-        jLabel6.setBounds(0, 30, 160, 61);
 
         p_user.setBackground(new java.awt.Color(255, 255, 255));
         p_user.setForeground(new java.awt.Color(255, 255, 255));
@@ -256,30 +257,35 @@ public class adminDashboard extends javax.swing.JFrame {
             }
         });
         p_user.add(jLabel5);
-        jLabel5.setBounds(40, 0, 100, 30);
+        jLabel5.setBounds(0, 10, 160, 20);
 
         jPanel2.add(p_user);
-        p_user.setBounds(-10, 90, 170, 60);
+        p_user.setBounds(0, 90, 160, 40);
+
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-user-100.png"))); // NOI18N
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(20, 0, 120, 90);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(25, 25, 25)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addContainerGap(267, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addGap(113, 113, 113)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(233, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(190, 0, 430, 490);
+        jPanel1.setBounds(190, 0, 450, 490);
 
         pack();
         setLocationRelativeTo(null);
@@ -416,7 +422,7 @@ public class adminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -428,6 +434,7 @@ public class adminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel p_user;
